@@ -14,9 +14,9 @@ const Content = () => {
         console.log(`Form submitted, ${search}`);
     }
     return ( 
-        <div className='ops w-full min-h-[90vh] sm:min-h-[100vh]   flex flex-col justify-between px-[25px] py-[110px] sm:py-[30px]'>
-            <div className='up w-full h-[45vh] sm:h-[65vh] lg:h-[70vh] flex flex-col justify-between'>
-                <img className='sm:w-[350px] sm:h-[350px] sm:mx-auto' src={penStack} alt="" />
+        <div className='ops w-full min-h-[90vh] sm:min-h-[100vh] lg:min-h-[87vh]   flex flex-col justify-between px-[25px] py-[110px] sm:py-[30px] '>
+            <div className='up w-full h-[45vh] sm:h-[65vh] lg:h-[55vh] flex flex-col justify-between'>
+                <img className='sm:w-[350px] sm:h-[350px] lg:*:w-[250px] lg:h-[250px] sm:mx-auto' src={penStack} alt="" />
 
                 <span>
                     <h6 className='text-[22px] lg:text-[24px] font-bold'>its a bit empty in here</h6>
