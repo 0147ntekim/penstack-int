@@ -19,7 +19,7 @@ const Content = () => {
             </div>
 
             <div className='w-full lg:w-[90%] lg:mx-auto h-[14vh] sm:h-[20vh] lg:h-[15vh] flex flex-col relative justify-between'>
-                <form action='submit' method='Post' className='w-full  relative  h-[60px] flex flex-row border-[3px] border-black rounded-[10px]'>
+                <form action='submit' method='Post' className='w-full  relative py-[10px]  h-[60px] flex flex-row border-[3px]  border-black rounded-[10px]'>
                     <CiSearch className='absolute top-[20px] lg:left-[8px]'/><input className='w-[65%] lg:w-[40%]  sm:w-[60%] px-[18px] lg:px-[30px] border-r-[3px] border-r-gray' name='name'  type="text" placeholder="Search by illness, provider, specialist" id="searchBar"/>
                     <GrLocation className='absolute top-[20px] left-[54%] lg:left-[41%]'/><input className='w-[25%] px-[18px] lg:px-[30px] border-r-[3px]  border-r-gray' name='name' id='idme' type="number" placeholder='Zipcode' />
                     <IoShieldOutline className='hidden lg:block lg:absolute lg:top-[20px] lg:left-[66%]'/><select className='w-[30%] sm:w-[35%] lg:w-[20%] lg:px-[30px]' id="idus" >
