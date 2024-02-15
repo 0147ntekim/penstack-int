@@ -36,7 +36,7 @@ const Content = () => {
                 </div>
                 
 
-                <button type='submit' className='w-[20%] lg:w-[10%] h-[40px] lg:absolute lg:left-[88%] lg:top-[5px] sm:h-[50px] flex justify-center rounded-[10px] bg-green-900 items-center mx-auto'>
+                <button onClick={handleSubmit} className='w-[20%] lg:w-[10%] h-[40px] lg:absolute lg:left-[88%] lg:top-[5px] sm:h-[50px] flex justify-center rounded-[10px] bg-green-900 items-center mx-auto'>
                     <CiSearch className='text-[30px] text-[#ffffff]'/>
                 </button>
             </form>
