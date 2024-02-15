@@ -32,3 +32,18 @@
   width: 8%;
   border-radius: 10px 10px 0 0;
 }
+
+
+@media (device-width:375px) and (device-height:667px){
+  .ops {
+    padding-top: 25px !important;
+    padding-bottom: 25px !important;
+  }
+  .up {
+    height: 60vh !important;
+  }
+
+  .opps {
+    height: 16vh !important;
+  }
+}
