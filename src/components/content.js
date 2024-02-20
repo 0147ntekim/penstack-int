@@ -8,10 +8,10 @@ import React, { useState } from 'react';
 
 
 const Content = () => {
-    const [search, setSearch] = useState('');
+    const [formData, setFormData] = useState('');
     const  handleSubmit = (e) => {
         e.preventDefault();
-        console.log(`Form submitted, ${search}`);
+        console.log(`Form submitted, ${formData}`);
     }
     return ( 
         <div className='ops w-full min-h-[90vh] sm:min-h-[100vh] lg:min-h-[87vh]   flex flex-col justify-between px-[25px] py-[110px] sm:py-[30px] '>
@@ -19,14 +19,14 @@ const Content = () => {
                 <img className='sm:w-[350px] sm:h-[350px] lg:*:w-[250px] lg:h-[250px] sm:mx-auto' src={penStack} alt="" />
 
                 <span>
-                    <h6 className='text-[22px] lg:text-[24px] font-bold'>its a bit empty in here</h6>
-                    <p className='text-[16px] lg:text-[18px] font-normal'>You can easily find a practise by using the search bar below</p>
+                    <h6 className='text-[22px] text-center lg:text-[24px] font-bold'>its a bit empty in here</h6>
+                    <p className='text-[16px] text-center lg:text-[18px] font-normal'>You can easily find a practise by using the search bar below</p>
                 </span>
             </div>
 
-            <form action='submit' onSubmit = {handleSubmit}   className='opps w-full lg:w-[90%] lg:mx-auto h-[14vh] sm:h-[20vh] lg:h-[15vh] flex flex-col relative justify-between'>
+            <form action='submit' onChange = {(e) => setFormData(e.target.value = '')} value={formData}    className='opps w-full lg:w-[90%] lg:mx-auto h-[14vh] sm:h-[20vh] lg:h-[15vh] flex flex-col relative justify-between'>
                 <div  className='w-full  relative py-[10px]  h-[60px] flex flex-row border-[3px] border-black rounded-[10px]'>
-                    <CiSearch className='absolute top-[20px] lg:left-[8px]'/><input onChange = {(e) => setSearch(e.target.value)} value = {search} className='w-[65%] lg:w-[40%]  sm:w-[60%] pl-[18px] lg:pl-[30px] border-r-[3px] lg border-r-gray' name='name'  type="text" placeholder="Search by illness, provider, specialist" id="searchBar"/>
+                    <CiSearch className='absolute top-[20px] lg:left-[8px]'/><input   className='w-[65%] lg:w-[40%]  sm:w-[60%] pl-[18px] lg:pl-[30px] border-r-[3px] border-r-gray' name='name'  type="text" placeholder="Search by illness, provider, specialist" id="searchBar"/>
                     <GrLocation className='absolute top-[20px] left-[54%] lg:left-[41%]'/><input className='w-[25%] pl-[18px] lg:pl-[30px] border-r-[3px]  border-r-gray' name='name' id='idme' type="number" placeholder='Zipcode' />
                     <IoShieldOutline className='hidden lg:block lg:absolute lg:top-[20px] lg:left-[66%]'/><select className='w-[30%] sm:w-[35%] lg:w-[20%] lg:pl-[30px]' id="idus" >
                         <option className='text-[14px]' value="">choose insurance</option>

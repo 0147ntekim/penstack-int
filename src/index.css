@@ -36,11 +36,11 @@
 
 @media (device-width:375px) and (device-height:667px){
   .ops {
-    padding-top: 25px !important;
-    padding-bottom: 25px !important;
+    padding-top: 60px !important;
+    padding-bottom: 60px !important;
   }
   .up {
-    height: 60vh !important;
+    height: 50vh !important;
   }
 
   .opps {

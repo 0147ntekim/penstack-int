@@ -1,3 +1,5 @@
+import React, { useState} from "react";
+
 import { GrLocation } from "react-icons/gr";
 import { CiSearch } from "react-icons/ci";
 import { RxDashboard } from "react-icons/rx";
@@ -8,13 +10,19 @@ import { FaAngleDown } from "react-icons/fa";
 import { RxHamburgerMenu } from "react-icons/rx";
 
 import profileImg  from '../images/profile.jpg';
-
+import Links from './menu';
 
 
 
 const Navbar = () => {
+    const [displayNavLinks, setDisplayNavLinks] = useState(false);
+
+    function toggleNav(){
+        setDisplayNavLinks(prev => !prev)
+    }
+
     return ( 
-        <header className="w-full min-h-[10vh] lg:min-h-[12vh] flex items-center border-b-[2px] border-b-gray-50 px-[25px] sm:px-[30px] lg:px-[50px]">
+        <header className="w-full min-h-[10vh] lg:min-h-[12vh] flex items-center border-b-[2px] border-b-gray-50 px-[25px] sm:px-[30px] lg:px-[50px] relative">
             <nav className="w-full flex flex-row justify-between items-center">
                 <div className="w-[80%] sm:w-[90%] lg:w-[40%] flex flex-row justify-between items-center">
                     <h3 className="text-[20px] lg:text-[25px] font-semibold">Logo</h3>
@@ -66,8 +74,9 @@ const Navbar = () => {
                     </span>
                 </div>
 
-                <RxHamburgerMenu  className="text-[22px]  lg:hidden"/>
+                <RxHamburgerMenu onClick={toggleNav}  className="text-[22px]  lg:hidden"/>
 
+                <Links displayNavLinks={displayNavLinks}/>
             </nav>
         </header>
     );
